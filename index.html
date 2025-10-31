@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-Js</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: rgb(109, 205, 205);
+        }
+        .Main {
+            text-align: center;
+            color: black;
+            padding: 50px;
+            margin: auto;
+        }
+        .btn {
+            color: white;
+            text-align: center;
+            background-color: rgb(33, 192, 8);
+            width: 82px;
+            height: 38px;
+            border-radius: 5px;
+            padding: 0px 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: rgb(26, 228, 66);
+        }
+    </style>
+</head>
+<body>
+    <div class="Main"> 
+        <h1>Free TEXT Analyser</h1>
+        <button onclick="text()" class="btn">Analyse Now</button>
+    </div>
+    <script>
+function text(){
+let sentence = prompt("Enter a sentence:");
+let replaceWord = prompt("Enter the word you want to replace:");
+let newWord = prompt("Enter the new word:");
+let subStr = prompt("Enter a word to check if it's present:");
+
+let wordCount = sentence.split(" ").length;
+let newSentence = sentence.replace(replaceWord, newWord);
+let isSubStrPresent = sentence.includes(subStr);
+
+alert(`Original sentence: ${sentence}
+Total words: ${wordCount}
+After replacing the word '${replaceWord}' with '${newWord}': ${newSentence}
+Is '${subStr}' present in the sentence? ${isSubStrPresent}`);
+}
+
+    </script>
+</body>
+</html>
